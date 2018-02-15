@@ -1,4 +1,7 @@
-/* forEachFinally */
+/***
+ * 最後に実行する
+ */
+
 fun <T> Array<T>.forEachFinally(main: (T) -> Unit, finally: (T) -> Unit) {
 
     iterator().forEachFinally(main, finally)
