@@ -18,7 +18,11 @@ class MutablePairMap<K1, K2, V> : Iterable<Triple<K1, K2, V>> {
         }
     }
 
+    fun get(key1: K1): MutableMap<K2, V>? = map[key1]
+
     fun get(key1: K1, key2: K2): V? = map[key1]?.get(key2)
+
+    fun keys() = map.keys
 
     override fun toString(): String = StringBuilder().apply {
 
